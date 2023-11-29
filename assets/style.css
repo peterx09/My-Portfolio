@@ -4,116 +4,194 @@
     --font-size-p: 16px;
 }
 
-body {
-    font-family: var(--font-overall);
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-}
-
-header h1 {
+* {
     margin: 0;
+    padding: 0;
 }
 
-nav { 
-    width: 100%; 
-    height: 80px; 
-    display: flex; 
-    justify-content: space-between; 
-    padding: 20px 5%; 
-    background-color: #ffffff; 
-} 
+/* heading */
 
-nav ul { 
-    display: flex; 
-    list-style: none; 
-} 
-
-nav li {
-    margin: 40px;
-    color:#fff;
+.header {
+    width: 100%;
+    background-color: #fff;
 }
 
-nav ul li { 
-    padding: 8px 15px; 
-    border-radius: 10px; 
-    transition: 0.2s ease-in; 
-} 
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 20px;
+}
 
-nav ul li a { 
-    color: black; 
-    font-size: 20px; 
-    font-weight: 500; 
-    text-decoration: none; 
-} 
+/* Navgiation Bar*/
 
-nav ul li:hover { 
-    background-color: green; 
-} 
+nav {
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
 
-nav ul li a:hover { 
-    color: white; 
-} 
+.nav {
+    flex: 1;
+    text-align: right;
+}
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav ul li::after {
+    content:'';
+    width: 0%;
+    height: 5px;
+    background-color: lightblue;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+
+.nav ul li:hover::after {
     width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    header, body {
-        flex-direction: column;
-        padding: 1%;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    nav li, section {
-        margin: 1%;
-    }
+/*About Me Section */
 
-    .work {
-        margin-bottom: 1%;
-    }
-
-    footer {
-        flex-direction: column;
-    }
+.aboutme {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
 }
 
-@media screen and (max-width: 300px) {
-    header, body {
+#aboutme-p {
+    color: black;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Work Section */
+
+.work {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-column {
+    flex-basis: 31%;
+    background-color: lightblue;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.work-column:hover {
+    box-shadow: 0 0 20px 0px grey;
+    transition: 1s;
+}
+
+
+/* Contact Me */
+
+.contactme {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Form Section */
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+}
+
+button {
+    background-color: lightblue;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/* Media Query */
+
+@media(max-width: 700px) {
+    .row {
         flex-direction: column;
-        padding: 1%;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
     }
 
-    nav li, section {
-        margin: 1%;
-    }
-
-    .work {
-        margin-bottom: 1%;
-    }
-
-    footer {
+    .nav ul li {
         flex-direction: column;
+        background-color: lightblue;
+        color: #fff;
     }
 }
