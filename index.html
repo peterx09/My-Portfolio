@@ -11,19 +11,23 @@
 
     <body>
         <header class="header">
-            <h1>Peter Xie's Portfolio</h1>
+            <h1>PETER XIE'S PORTFOLIO</h1>
             <nav >
                 <div class="nav">
                     <ul>
-                        <li><a href="#about-me">ABOUT ME</a></li>
+                        <li><a href="#aboutme">ABOUT ME</a></li>
                         <li><a href="#work">WORK</a></li>
-                        <li><a href="#contact">CONTACT ME</a></li>
+                        <li><a href="#contactme">CONTACT ME</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <section class="aboutme">
+        <div class="portrait">
+            <img src="./images/portrait.png" alt="A portrait of Peter Xie">
+        </div>
+
+        <section class="aboutme" id="aboutme">
             <h2>About Me</h2>
             <p id="aboutme-p">Hello there! I'm a 28-year-old adventurer navigating life in the vibrant city of Sydney, Australia. My journey is fueled by a passion for learning and a relentless curiosity about the world around me.
                 <br>
@@ -37,27 +41,29 @@
             </p>
         </section>
 
-        <section class="work">
+        <section class="work" id="work">
             <h2>Work</h2>
             <div class="row">
                 <div class="work-column">
                     <h3>Project 1</h3> 
-                    <p>Alter the website HTML to achieve accessibility standards.</p>
+                    <p class="work-p">Alter the website HTML to achieve accessibility standards.</p>
                 </div>
-            
+
                 <div class="work-column">
                     <h3>Project 2</h3> 
-                    <p>Creating a landing page.</p>
+                    <p class="work-p">Creating a landing page.</p>
+                    <a href="https://peterx09.github.io/Horiseon-Refactoring/" target = "_blank">
+                        <img id="project1" src="images/project 1.png" alt="an image of project1"></a>
                 </div>
             
                 <div class="work-column">
                     <h3>Project 3</h3> 
-                    <p>Create a cheat sheet.</p>
+                    <p class="work-p">Create a cheat sheet.</p>
                 </div>
             </div>
         </section>
 
-        <section class="contactme">
+        <section class="contactme" id="contactme">
             <h2>Contact Me</h2>
             <form>
                 <label for="name">Name:</label>
@@ -74,9 +80,8 @@
         </section>
 
         <footer>
-
+            <p>&copy; 2023 PETER XIE. All rights reserved.</p>
         </footer>
     </body>
-
 
 </html>
