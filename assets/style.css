@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
 h1 {
@@ -30,7 +31,7 @@ nav {
 
 .nav {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .nav ul li {
@@ -224,10 +225,19 @@ footer {
 
 
 
-@media(max-width: 700px) {
+@media(max-width: 800px) {
 
-    .portrait img {
-        align-content: center;
+    header {
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .portrait {
+        margin-left: 20px;
+        margin-bottom: 50px;
         width: 100%;
     }
 
@@ -235,10 +245,17 @@ footer {
         flex-direction: column;
     }
 
+    .nav {
+        text-align: center;
+        width: 100%;
+    }
+
     .nav ul li {
         display: flex;
         flex-direction: row;
         background-color: lightblue;
         color: #fff;
+        text-align: center;
     }
+
 }
