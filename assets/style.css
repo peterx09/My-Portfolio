@@ -147,7 +147,7 @@ h3 {
 }
 
 
-#project1 {
+.project-img {
    max-width: 100%;
    height: auto;
    display: block;
